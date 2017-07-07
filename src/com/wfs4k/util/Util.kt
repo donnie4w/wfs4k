@@ -34,7 +34,7 @@ class  Utils{
 class StringUtil {
     companion object {
         fun notEmpty(s: String?): Boolean {
-            return s != null && s.trim { it <= ' ' }.length > 0
+            return s != null && s.trim().length > 0
         }
 
         fun toBytes(s: String): ByteArray? {
