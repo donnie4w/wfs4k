@@ -26,7 +26,7 @@ class Server {
             b.childHandler(ServerInitializer())
             b.bind(port).sync().channel().closeFuture().sync();
         } catch (e: Exception) {
-            e.printStackTrace()
+            logger.log(e)
         } finally {
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();

@@ -17,11 +17,7 @@ import io.netty.handler.codec.http.HttpVersion.HTTP_1_1
  */
 
 
-class ServerHandler : ChannelInboundHandlerAdapter {
-    constructor() {
-    }
-
-
+class ServerHandler : ChannelInboundHandlerAdapter() {
     override fun channelRead(ctx: ChannelHandlerContext?, msg: Any?) {
         try {
             var request: HttpRequest? = null
@@ -29,7 +25,6 @@ class ServerHandler : ChannelInboundHandlerAdapter {
             if (msg is HttpRequest) {
                 request = msg as HttpRequest
                 uri = request!!.uri()
-                println(uri)
             }
             if (msg is HttpContent) {
                 val rh = Controller.Route(uri)
@@ -52,7 +47,6 @@ class ServerHandler : ChannelInboundHandlerAdapter {
             e.printStackTrace()
             throw WfsException(e)
         }
-
     }
 
     override fun channelReadComplete(ctx: ChannelHandlerContext) {
