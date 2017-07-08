@@ -9,7 +9,23 @@
     <name>wfs4k</name>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>22.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.iq80.leveldb</groupId>
+            <artifactId>leveldb</artifactId>
+            <version>0.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.iq80.leveldb</groupId>
+            <artifactId>leveldb-api</artifactId>
+            <version>0.7</version>
+        </dependency>
+
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
@@ -17,6 +33,28 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/netty-all-4.1.10.Final.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>iwfs</groupId>
+            <artifactId>iwfs</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/iwfs.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>coroutines</groupId>
+            <artifactId>coroutines</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/kotlinx-coroutines-core.jar</systemPath>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.thrift/libthrift -->
+        <dependency>
+            <groupId>org.apache.thrift</groupId>
+            <artifactId>libthrift</artifactId>
+            <version>0.10.0</version>
+        </dependency>
+
         <!-- slf4j -->
         <dependency>
             <groupId>org.slf4j</groupId>
