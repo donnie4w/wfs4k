@@ -37,8 +37,7 @@ class Config {
         fun parse(args: Array<String>): Boolean {
             try {
                 if (args != null && args.size > 0) {
-                    println(args.size)
-                    for (i in 0..args.size) {
+                    for (i in 0..args.size-1) {
                         when {
                             args[i] == _p -> port = args[i + 1].toInt()
                             args[i] == _MD -> maxDataSize = args[i + 1].toLong()
